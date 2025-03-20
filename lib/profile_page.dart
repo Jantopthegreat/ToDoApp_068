@@ -148,4 +148,17 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                           ),
                         ),
-                       
+                        SizedBox(width: 10),
+                        OutlinedButton(
+                          onPressed: () {
+                            if (key.currentState!.validate()) {
+                              addData();
+                            }
+                          },
+                          child: Text('Submit'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
