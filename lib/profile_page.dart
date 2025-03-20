@@ -63,3 +63,31 @@ class _ProfilePageState extends State<ProfilePage> {
       }
     }
   }
+
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            spacing: 15,
+            children: [
+              Row(
+                spacing: 15,
+                children: [
+                  CircleAvatar(
+                    radius: 25,
+                    backgroundImage: AssetImage('assets/images/fotogantenk.jpg'),
+                  ),
+                  Text(
+                    'Yung Jan Never Broke Again',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text('Form Page', style: TextStyle(fontSize: 20)),
+              ),
