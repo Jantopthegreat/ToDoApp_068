@@ -93,4 +93,6 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Form(
                 key: key,
-                
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  
