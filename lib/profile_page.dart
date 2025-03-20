@@ -184,4 +184,40 @@ class _ProfilePageState extends State<ProfilePage> {
                                     fontSize: 18,
                                   ),
                                 ),
-                                
+                                subtitle: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Deadline: ${tugas.deadline.day}-${tugas.deadline.month}-${tugas.deadline.year} ${tugas.deadline.hour}:${tugas.deadline.minute}',
+                                    ),
+                                    Text(
+                                      tugas.status ? 'Done' : 'Not Done',
+                                      style: TextStyle(
+                                        color:
+                                            tugas.status
+                                                ? Colors.green
+                                                : Colors.red,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                trailing: Checkbox(
+                                  value: tugas.status,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      tugas.status = value ?? false;
+                                    });
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
