@@ -91,3 +91,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.only(bottom: 10.0),
                 child: Text('Form Page', style: TextStyle(fontSize: 20)),
               ),
+              Form(
+                key: key,
+                
