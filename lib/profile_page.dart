@@ -167,4 +167,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 'Task List',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-             
+              Expanded(
+                child:
+                    (daftarTugas.isEmpty)
+                        ? Center(child: Text('Task list is empty'))
+                        : ListView.builder(
+                          itemCount: daftarTugas.length,
+                          itemBuilder: (context, index) {
+                           
