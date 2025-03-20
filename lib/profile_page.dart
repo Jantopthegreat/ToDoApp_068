@@ -125,4 +125,16 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
 
-                   
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextFormField(
+                            controller: tugasController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                            
