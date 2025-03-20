@@ -116,4 +116,13 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ],
                     ),
-                    
+                    if (selectedDate == null)
+                      Transform.translate(
+                        offset: Offset(0, -10),
+                        child: Text(
+                          'Please select a date',
+                          style: TextStyle(color: Colors.red, fontSize: 13),
+                        ),
+                      ),
+
+                   
