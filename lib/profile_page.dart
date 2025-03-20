@@ -22,4 +22,20 @@ class _ProfilePageState extends State<ProfilePage> {
   List<Tugas> daftarTugas = [];
   DateTime? selectedDate;
 
+  void addData() {
+    if (key.currentState!.validate()) {
+      if (selectedDate == null) {
+        setState(() {});
+        return;
+      }
+      setState(() {
+        daftarTugas.add(
+          Tugas(tugas: tugasController.text, deadline: selectedDate!),
+        );
+        tugasController.clear();
+        selectedDate = null;
+      });
+    }
+  }
+
   
