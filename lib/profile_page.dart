@@ -100,4 +100,20 @@ class _ProfilePageState extends State<ProfilePage> {
                       offset: const Offset(0, 15),
                       child: Text('Task Date:', style: TextStyle(fontSize: 16)),
                     ),
-                   
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            selectedDate == null
+                                ? 'Select a Date'
+                                : '${selectedDate!.day}-${selectedDate!.month}-${selectedDate!.year}-${selectedDate!.hour}-${selectedDate!.minute}',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.calendar_today),
+                          onPressed: () => selectDate(context),
+                        ),
+                      ],
+                    ),
+                    
