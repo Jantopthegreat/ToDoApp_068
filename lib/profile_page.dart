@@ -137,4 +137,15 @@ class _ProfilePageState extends State<ProfilePage> {
                               }
                               return null;
                             },
-                            
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
+                            decoration: InputDecoration(
+                              label: Text('Task'),
+                              hintText: 'Enter your task',
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                            ),
+                          ),
+                        ),
+                       
