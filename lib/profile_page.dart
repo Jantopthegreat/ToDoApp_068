@@ -174,14 +174,4 @@ class _ProfilePageState extends State<ProfilePage> {
                         : ListView.builder(
                           itemCount: daftarTugas.length,
                           itemBuilder: (context, index) {
-                            final tugas = daftarTugas[index];
-                            return Card(
-                              child: ListTile(
-                                title: Text(
-                                  tugas.tugas,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                               
+                            
